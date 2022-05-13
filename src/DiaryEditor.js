@@ -21,8 +21,6 @@ const DiaryEditor = () => {
   };
 
   const handleAddButtonClick = () => {
-    alert("일기가 추가되었어요!");
-    return;
     console.log("추가될 일기 : ", diary);
 
     if (diary.author.length < 1) {
@@ -30,13 +28,13 @@ const DiaryEditor = () => {
       return;
     }
 
-    if (diary.content.length < 1) {
+    if (diary.content.length < 5) {
       contentRef.current.focus();
       return;
     }
 
     onCreate(diary.author, diary.content, diary.emotion);
-    alert("일기가 성공적으로 추가되었습니다");
+    alert("일기가 성공적으로 추가되었습니다!");
 
     setDiary({
       author: "",
@@ -55,7 +53,7 @@ const DiaryEditor = () => {
         <input
           ref={authorRef}
           name="author"
-          placeholder="작성자"
+          placeholder="작성자(1글자 이상 입력해 주세요)"
           type="text"
           value={diary.author}
           onChange={handleChangeDiary}
@@ -65,7 +63,7 @@ const DiaryEditor = () => {
         <textarea
           ref={contentRef}
           name="content"
-          placeholder="일기"
+          placeholder="일기(5글자 이상 입력해 주세요)"
           type="text"
           value={diary.content}
           onChange={handleChangeDiary}
@@ -86,7 +84,7 @@ const DiaryEditor = () => {
         </select>
       </div>
       <div>
-        <button onClick={handleAddButtonClick}>일기 저장하기</button>
+        <button onClick={handleAddButtonClick}>내맘속에 저장</button>
       </div>
     </div>
   );

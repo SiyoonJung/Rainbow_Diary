@@ -15,7 +15,7 @@ const DiaryItem = ({ id, author, content, emotion, created_date }) => {
   const localContentRef = useRef(null);
 
   const handleClickDelete = () => {
-    if (window.confirm(`${id}번 째 일기를 삭제하시겠습니까?`)) {
+    if (window.confirm(`${id+1}번 째 일기를 삭제하시겠습니까?`)) {
       onRemove(id);
     }
   };
@@ -26,7 +26,7 @@ const DiaryItem = ({ id, author, content, emotion, created_date }) => {
       return;
     }
 
-    if (window.confirm(`${id}번 째 일기를 수정하시겠습니까?`)) {
+    if (window.confirm(`${id+1}번 째 일기를 수정하시겠습니까?`)) {
       onEdit(id, localContent);
       toggleIsEditNow();
     }
@@ -59,14 +59,14 @@ const DiaryItem = ({ id, author, content, emotion, created_date }) => {
         )}
       </div>
       {isEditNow ? (
-        <div>
-          <button onClick={handleQuitEdit}>수정 취소하기</button>
-          <button onClick={handleClickEdit}>저장하기</button>
+        <div className="buttons">
+          <button className="btn negative" onClick={handleQuitEdit}>취소</button>
+          <button className="btn positive" onClick={handleClickEdit}>저장</button>
         </div>
       ) : (
-        <div>
-          <button onClick={handleClickDelete}>삭제하기</button>
-          <button onClick={toggleIsEditNow}>수정하기</button>
+        <div className="buttons">
+          <button className="btn negative" onClick={handleClickDelete}>삭제</button>
+          <button className="btn positive" onClick={toggleIsEditNow}>수정</button>
         </div>
       )}
     </div>

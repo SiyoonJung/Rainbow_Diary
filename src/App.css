@@ -1,19 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+body {
+  background: rgb(255, 228, 205);
+}
+
 /* App */
 .App {
+  margin:0;
+  font-family: 'Nanum Myeongjo', serif;
+  background-image: url(./rainbow.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: lighten;
+}
+
+.App .statList {
+  display: flex;
+  flex-direction: row;
+}
+
+.App .statList .stat {
+  width: 18%;
+  margin: 0 auto;
+  padding: 1%;
+  color: #333;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid black;
 }
 
 /* editor */
 
 .DiaryEditor_container {
-  border: 1px solid gray;
+  border: 1px solid rgb(116, 112, 112);
   text-align: center;
-  padding: 20px;
+  padding: 2%;
+}
+
+.DiaryEditor_container h2 {
+  font-size: 25px;
+  color: #111;
 }
 
 .DiaryEditor_container input,
 textarea {
-  margin-bottom: 20px;
-  width: 500px;
+  background: transparent;
+  margin-bottom: 1.5%;
+  width: 50%;
 }
 
 .DiaryEditor_container input {
@@ -25,15 +58,28 @@ textarea {
 }
 
 .DiaryEditor_container select {
-  width: 300px;
+  width: 20%;
   padding: 10px;
   margin-bottom: 20px;
+  background: transparent;
 }
 
 .DiaryEditor_container button {
-  width: 500px;
+  width: 30%;
   padding: 10px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: bold;
+  font-size: 17px;
   cursor: pointer;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color:rgb(61, 59, 60);
+}
+
+.DiaryEditor_container button:hover {
+  background-color:rgb(245, 241, 243);
+  color: #111;
 }
 
 /*  List */
@@ -46,13 +92,18 @@ textarea {
 
 .DiaryList_container h2 {
   text-align: center;
+  font-size: 25px;
+  color: #111;
 }
 
 /* List Item */
 
 .DiaryItem_container {
-  background-color: rgb(240, 240, 240);
-  margin-bottom: 10px;
+  font-family: 'Nanum Myeongjo', serif;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px double #999;
+  margin-bottom: 25px;
   padding: 20px;
 }
 
@@ -66,7 +117,7 @@ textarea {
   margin-bottom: 10px;
 }
 .DiaryItem_container .date {
-  color: gray;
+  color: rgb(105, 103, 103);
 }
 
 .DiaryItem_container .content {
@@ -77,4 +128,34 @@ textarea {
 
 .DiaryItem_container textarea {
   padding: 10px;
+}
+
+.DiaryItem_container .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.DiaryItem_container .buttons .btn {
+  width: 15%;
+  padding: 10px;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.DiaryItem_container .buttons .negative {
+  color: #111;
+  background-color:rgb(229, 106, 95);
+}
+
+.DiaryItem_container .buttons .positive {
+  color: #111;
+  background-color:rgb(95, 233, 97);
 }
