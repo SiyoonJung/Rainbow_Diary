@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Rainbow_Diary/static/css/main.50a2a4c5.chunk.css",
+    "main.js": "/Rainbow_Diary/static/js/main.13f7327d.chunk.js",
+    "main.js.map": "/Rainbow_Diary/static/js/main.13f7327d.chunk.js.map",
+    "runtime-main.js": "/Rainbow_Diary/static/js/runtime-main.4067fea6.js",
+    "runtime-main.js.map": "/Rainbow_Diary/static/js/runtime-main.4067fea6.js.map",
+    "static/js/2.a77ea78e.chunk.js": "/Rainbow_Diary/static/js/2.a77ea78e.chunk.js",
+    "static/js/2.a77ea78e.chunk.js.map": "/Rainbow_Diary/static/js/2.a77ea78e.chunk.js.map",
+    "index.html": "/Rainbow_Diary/index.html",
+    "static/css/main.50a2a4c5.chunk.css.map": "/Rainbow_Diary/static/css/main.50a2a4c5.chunk.css.map",
+    "static/js/2.a77ea78e.chunk.js.LICENSE.txt": "/Rainbow_Diary/static/js/2.a77ea78e.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Rainbow_Diary/static/media/rainbow.e8649d5a.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4067fea6.js",
+    "static/js/2.a77ea78e.chunk.js",
+    "static/css/main.50a2a4c5.chunk.css",
+    "static/js/main.13f7327d.chunk.js"
+  ]
+}
